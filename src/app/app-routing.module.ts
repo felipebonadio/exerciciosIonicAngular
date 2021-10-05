@@ -11,6 +11,30 @@ const routes: Routes = [
     redirectTo: 'home',
     pathMatch: 'full'
   },
+  {
+    path: 'media',
+    loadChildren: () => import('./media/media.module').then( m => m.MediaPageModule)
+  },
+  {
+    path: 'banco',
+    loadChildren: () => import('./banco/banco.module').then( m => m.BancoPageModule)
+  },
+  {
+    path: 'salario',
+    loadChildren: () => import('./salario/salario.module').then( m => m.SalarioPageModule)
+  },
+  {
+    path: 'jornada',
+    loadChildren: () => import('./jornada/jornada.module').then( m => m.JornadaPageModule)
+  },
+  {
+    path: 'voto',
+    loadChildren: () => import('./voto/voto.module').then( m => m.VotoPageModule)
+  },
+  {
+    path: 'produto',
+    loadChildren: () => import('./produto/produto.module').then( m => m.ProdutoPageModule)
+  },
 ];
 
 @NgModule({

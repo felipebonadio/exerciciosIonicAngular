@@ -1,0 +1,36 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Calculadora de Salário</ion-title>
+    <ion-buttons slot="start">
+      <ion-back-button></ion-back-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+
+  <ion-item>
+    <ion-label position="floating">Nome</ion-label>
+    <ion-input type="text" [(ngModel)]="nome"></ion-input>
+  </ion-item>
+
+  <ion-item>
+    <ion-label position="floating">Salario atual</ion-label>
+    <ion-input type="number" [(ngModel)]="salario"></ion-input>
+  </ion-item>
+
+  <ion-item>
+    <ion-label position="floating">Aumento</ion-label>
+    <ion-input type="number" [(ngModel)]="aumento"></ion-input>
+  </ion-item>
+
+  <ion-button (click)="calcular()">Calcular</ion-button>
+
+  <ion-item>
+    <ion-text color="primary">
+      <h3 *ngIf="resultado">O colaborador {{nome}}, que recebia R${{salario}} passará a receber R${{resultado.toFixed(2)}} a mais após o aumento de {{aumento}}%, 
+        dando um total de R${{total.toFixed(2)}}.</h3>
+    </ion-text>
+  </ion-item>
+
+</ion-content>
