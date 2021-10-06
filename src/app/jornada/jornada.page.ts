@@ -30,7 +30,7 @@ export class JornadaPage {
 
   public calcularExtra(): void {
     if (this.horas > 40) {
-      this.extra = this.salario * ((this.horas - 40) * 0.5);
+      this.extra = this.salario * ((this.horas - 160) * 1.5);
     }
     else{
       this.extra = 0;
@@ -44,6 +44,11 @@ export class JornadaPage {
   }
 
   public exibirMsg(): void {
-    this.msg = "O salário total é " + this.isfinal;
+    this.calcularExtra();
+    if(this.extra ==0){
+      this.msg = "O salário total é R$" + this.isfinal.toFixed(2);    }
+    else{
+      this.msg = "O salário total é R$" + this.isfinal.toFixed(2)+", recebendo um total em horas extras de R$"+this.extra.toFixed(2);}
+    }
   }
-}
+

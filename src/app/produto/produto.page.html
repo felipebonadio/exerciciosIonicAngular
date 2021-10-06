@@ -1,9 +1,34 @@
 <ion-header>
   <ion-toolbar>
-    <ion-title>produto</ion-title>
+    <ion-title>Calculadora de produto</ion-title>
+    <ion-buttons slot="start">
+      <ion-back-button></ion-back-button>
+    </ion-buttons>
   </ion-toolbar>
 </ion-header>
 
 <ion-content>
+  <ion-item>
+    <ion-label position="floating">Nome</ion-label>
+    <ion-input type="text" [(ngModel)]="nome"></ion-input>
+  </ion-item>
+
+  <ion-item>
+    <ion-label position="floating">Quantidade</ion-label>
+    <ion-input type="number" [(ngModel)]="quant"></ion-input>
+  </ion-item>
+  
+  <ion-item>
+    <ion-label position="floating">Preço</ion-label>
+    <ion-input type="number" [(ngModel)]="preco"></ion-input>
+  </ion-item>
+
+   
+  <ion-button (click)="showMsg()">
+    Calcular
+  </ion-button>
+  <ion-text color="primary">
+    <h3>{{msg}}</h3>
+  </ion-text>
 
 </ion-content>
