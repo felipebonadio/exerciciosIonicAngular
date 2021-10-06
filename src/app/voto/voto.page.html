@@ -1,9 +1,28 @@
 <ion-header>
   <ion-toolbar>
-    <ion-title>voto</ion-title>
+    <ion-title>Voto</ion-title>
+    <ion-buttons slot="start">
+      <ion-back-button></ion-back-button>
+    </ion-buttons>
   </ion-toolbar>
 </ion-header>
 
 <ion-content>
-
-</ion-content>
+  <ion-item>
+    <ion-label position="floating">Nascimento</ion-label>
+    <ion-input type="number" [(ngModel)]="birthdate"></ion-input>
+  </ion-item>
+  <ion-item>
+    <ion-label position="floating">Ano</ion-label>
+    <ion-input type="number" [(ngModel)]="year"></ion-input>
+  </ion-item>
+  
+  
+  
+  <ion-button (click)="verify()" >
+    Calcular
+  </ion-button>
+  <ion-text color="primary">
+    <h3 *ngIf="birthdate">{{msg}}! </h3>
+  </ion-text>
+  </ion-content>
