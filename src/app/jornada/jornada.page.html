@@ -5,5 +5,21 @@
 </ion-header>
 
 <ion-content>
+  <ion-item>
+    <ion-label position="floating">Horas</ion-label>
+    <ion-input type="number" [(ngModel)]="horas"></ion-input>
+  </ion-item>
+  
+  <ion-item>
+    <ion-label position="floating">Valor da hora</ion-label>
+    <ion-input type="number" [(ngModel)]="salario"></ion-input>
+  </ion-item>
 
-</ion-content>
+   
+  <ion-button (click)="verify()">
+    Calcular
+  </ion-button>
+  <ion-text color="primary">
+    <h3>{{msg}} </h3>
+  </ion-text>
+  </ion-content>

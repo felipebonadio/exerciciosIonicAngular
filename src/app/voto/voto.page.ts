@@ -15,7 +15,7 @@ export class VotoPage {
   public birthdate: number;
   public age: number;
   public msg: String;
-  public year: number;
+  
 
   public verify(): void{
     this.calculateAge();
@@ -23,8 +23,9 @@ export class VotoPage {
   }
   
   public calculateAge(): void {
-    this.age = this.year - this.birthdate;    
+    this.age = 2021 - this.birthdate;    
   }
+
   public showMsg(age:number):void{
     if (age<16){
       this.msg= "Você não poderá votar este ano!"
@@ -32,7 +33,7 @@ export class VotoPage {
       this.msg = "Seu voto é opcional este ano!"
     } else{
       this.msg= "Seu voto é obrigatório este ano!"
-    }    
+    }   
   }
 }
 
