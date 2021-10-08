@@ -29,7 +29,7 @@ export class JornadaPage {
   }
 
   public calcularExtra(): void {
-    if (this.horas > 40) {
+    if (this.horas > 160) {
       this.extra = this.salario * ((this.horas - 160) * 1.5);
     }
     else{

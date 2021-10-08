@@ -27,7 +27,7 @@ export class ProdutoPage {
   
   showMsg(): void{
     this.calcularTotal();
-    this.msg = "O preço final do produto "+ this.nome + " é R$" + this.precoFinal;
+    this.msg = "O preço final do produto "+ this.nome + " é R$" + this.precoFinal.toFixed(2);
   }
 
   calcularTotal():void{
